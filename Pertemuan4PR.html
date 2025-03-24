@@ -1,45 +1,149 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login as User</title>
     <style>
-        <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 10;
-  width: 100%;
-  background-color: rgb(56, 52, 52);
-  color: rgb(45, 39, 39);
-  text-align: center;
-}
- .login-container {
-        background-color: #ffffff;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
 
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 40px;
+            left: 20px;
+        }
+
+        .back-arrow {
+            font-size: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 10px; /* Space between the arrow and header */
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .input-field {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .input-field input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            outline: none;
+            padding-left: 8px;
+        }
+
+        .icon {
+            color: #aaa;
+        }
+
+        .login-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-weight: bold;
+            align-self: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            color: #555;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer {
+            height: 50px;
+            background-color: #808080;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
     </style>
-    </head>
+</head>
 <body>
-    <div class="container">
-        <h1>Login as user</h1>
-        
-      </div>
-    
-    <div class="login-container">
-        <div class="input-field">
-            <span class="icon">👤</span>
-            <input type="text" placeholder="Username" required>
+    <div class="main-container">
+        <div class="header-container">
+            <a href="#" class="back-arrow"><</a>
+            <div class="header">Login as User</div>
         </div>
-        <div class="input-field">
-            <span class="icon">🔒</span>
-            <input type="password" placeholder="Password" required>
+        <div class="content">
+            <div class="Logo">
+                <img src="../logo.png" alt="Cek Dong!">
+            </div>
+
+            <div class="input-field">
+                <span class="icon">🔑</span>
+                <input type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input-field">
+                <span class="icon">🔒</span>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <button class="login-btn">Login</button>
+            <a href="#" class="forgot-password">Forgot Password</a>
         </div>
 
-    <input type="submit" value="Log in">
-    <input type="button" value="Forgot password">
-</div>
-<div class="footer">
-    <p>Footer</p>
-  </div>
- 
+        <div class="footer"></div>
+    </div>
 </body>
-
 </html>
